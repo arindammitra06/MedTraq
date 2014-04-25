@@ -9,11 +9,13 @@ import com.mysql.jdbc.PreparedStatement;
 
 public class LoginDao extends ParentDAO {
 
+	public static final String SELECT_FROM_USER_WHERE_USER_NAME_AND_PASSWORD = "select * from user where userName=? and password=?";
+
 	public String login(String userName,String password) throws ClassNotFoundException, SQLException {
 		// TODO Auto-generated method stub
 		LoginActivityForm login=new LoginActivityForm();
 		Connection conn=(Connection) getDBConnection();
-		String sql="select * from user where userName=? and password=?";
+		String sql=SELECT_FROM_USER_WHERE_USER_NAME_AND_PASSWORD;
 		PreparedStatement pstmt=(PreparedStatement) conn.clientPrepareStatement(sql);
 		pstmt.setString(1, userName);
 		pstmt.setString(2,password);
