@@ -4,13 +4,13 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<title>MedTraq</title>
+<title>UDISolution</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
       
       <style type="text/css">
       body {
-        padding-top: 40px;
+        padding-top: 0px;
         padding-bottom: 40px;
         background-color: #E5E5E5;
       }
@@ -55,46 +55,10 @@
   </head>
   <body  data-spy="scroll" data-target=".bs-docs-sidebar">
   <html:form action="home.do?method=stock" styleId="homeForm">
-  <div class="navbar navbar-fixed-top" align="left">
-      <div class="navbar-inner">
-        <div class="container">
-          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="brand" href="./index.html">MedTraq</a>
-          <div class="nav-collapse collapse">
-            <ul class="nav">
-              <li class="">
-                <a href="">Home</a>
-              </li>
-              <li class="">
-                <a href="home.do?method=stock">Stock</a>
-              </li>
-              <li class="">
-                <a href="home.do?method=billing">Billing</a>
-              </li>
-              <li class="">
-                <a href="">Bulk Add Stock</a>
-              </li>
-              <li class="">
-                <a href="home.do?method=reports">Reports</a>
-              </li>
-              <li class="">
-                <a href="home.do?method=settings">Settings</a>
-              </li>
-              <li class="">
-                <a href="">Logout</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
+  <%@include file="/pages/menu.jsp" %>
   <header class="jumbotron subhead" id="module">
   	<div class="container" >
-    <h1>* Stock Management</h1>
+    <h1>* Settings </h1>
   	</div>
 	</header>
     <div class="container">
@@ -102,10 +66,10 @@
      <div class="row">
       <div class="span3 bs-docs-sidebar">
         <ul class="nav nav-list bs-docs-sidenav">
-          <li><a href="#global">View/Edit Stock</a></li>
-          <li><a href="#gridSystem">Add Stock</a></li>
-          <li><a href="#fluidGridSystem">Bulk Import Stock</a></li>
-          <li><a href="#layouts">Delete Stock</a></li>
+          <li><a href="#global">Create User</a></li>
+          <li><a href="#gridSystem"></a></li>
+          <li><a href="#fluidGridSystem"></a></li>
+          <li><a href="#layouts"></a></li>
         </ul>
       </div>
       <div class="span9">

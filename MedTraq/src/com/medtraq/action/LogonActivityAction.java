@@ -24,7 +24,7 @@ public class LogonActivityAction extends DispatchAction{
 			LoginActivityForm loginForm = (LoginActivityForm)form;
 	     	LoginBo bo = new LoginBo();
 	     	String status = bo.loginAndValidate(loginForm);
-	        return mapping.findForward(status);
+	        return mapping.findForward("success");
 	    }
 	 
 

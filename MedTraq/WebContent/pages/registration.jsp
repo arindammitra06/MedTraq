@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<html: form name="user_registration" id="user_registration">
+	<html:form name="user_registration" id="user_registration"></html:form>
 		
 	</form>
 </body>

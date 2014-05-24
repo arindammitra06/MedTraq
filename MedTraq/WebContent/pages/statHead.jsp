@@ -5,12 +5,12 @@
 <html>
 	<head>
 	</head>
-	<body style="background:#424242">
+	<body style="background:#0B173B">
 	<div class="container">
 
 			<div>
 				<div>
-					<a href="http://localhost:8080/MedTraq/">
+					<a href="http://localhost:8080/UDISolution/">
 					<!-- <img src="../images/voqueIcon.png" alt="msg" align="left"/></a> -->
 				</div>
 			</div>

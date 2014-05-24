@@ -13,7 +13,7 @@
 	<body style="background:#9E9D9D">
 				<div id="footer" align="center">
 				      <div class="container">
-				         <p> * Designed and built by Arindam Mitra. For any details e-mail arindammitra06@gmail.com * </p>
+				         <p> @ Cognizant Technology Solutions </p>
 				      </div>
 				</div>
 	</body>
