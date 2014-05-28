@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-    <%@taglib uri="/WEB-INF/struts-html.tld" prefix="html" %>
+    <%@ taglib uri="/WEB-INF/struts-logic.tld" prefix="logic" %>
+	<%@ taglib uri="/WEB-INF/struts-bean.tld" prefix="bean" %>
+	<%@ taglib uri="/WEB-INF/struts-html.tld" prefix="html" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -70,6 +72,16 @@
         <html:submit value="Log in" styleClass="btn btn-primary">
            <i class="icon-circle-arrow-right"></i>
            </html:submit>
+           <div>
+           <h3><font color="red">
+           <html:messages id="msg" name="MY_MESSAGES_KEY">
+    		   <li><bean:write name="msg" /></li>
+   			</html:messages>
+           
+           
+           </font></h3>
+			</div> 
+           
 	</html:form>
     </div> 
 

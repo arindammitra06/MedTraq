@@ -5,6 +5,8 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
+import org.apache.struts.action.ActionMessage;
+import org.apache.struts.action.ActionMessages;
 import org.apache.struts.actions.DispatchAction;
 
 import com.medtraq.bo.LoginBo;
@@ -23,8 +25,22 @@ public class LogonActivityAction extends DispatchAction{
 		 
 			LoginActivityForm loginForm = (LoginActivityForm)form;
 	     	LoginBo bo = new LoginBo();
-	     	String status = bo.loginAndValidate(loginForm);
-	        return mapping.findForward("success");
+	     	if(loginForm.getUserName()==null || (loginForm.getUserName()!=null && "".equalsIgnoreCase(loginForm.getUserName()))){
+	     		
+	     		ActionMessages messages = new ActionMessages();
+	            messages.add("ACTION", new ActionMessage("error.key.username"));
+	            request.setAttribute("MY_MESSAGES_KEY", messages);
+	     		return mapping.findForward(FAILURE);
+	     	}else if(loginForm.getPassword()==null || (loginForm.getPassword()!=null && "".equalsIgnoreCase(loginForm.getPassword()))){
+	     		ActionMessages messages = new ActionMessages();
+	            messages.add("ACTION", new ActionMessage("error.key.password"));
+	            request.setAttribute("MY_MESSAGES_KEY", messages);
+	     		return mapping.findForward(FAILURE);
+	     	}
+	     	else{
+	     		String status = bo.loginAndValidate(loginForm);
+		        return mapping.findForward(status);	
+	     	}
 	    }
 	 
 

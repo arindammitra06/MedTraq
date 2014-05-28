@@ -35,7 +35,7 @@
 	
     </action-mappings>
 
-
+<message-resources parameter="com.medtraq.message.resources.ApplicationResources" />
 
 <!-- ======================================== Message Resources Definitions -->
 
