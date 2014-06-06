@@ -55,7 +55,7 @@
   </head>
   <body  data-spy="scroll" data-target=".bs-docs-sidebar">
   <html:form action="home.do?method=stock" styleId="homeForm">
-  <%@include file="/pages/menu.jsp" %>
+  <%@ include file="/pages/menu.jsp" %>
   <header class="jumbotron subhead" id="module">
   	<div class="container" >
     <h1>* Settings </h1>
@@ -66,7 +66,7 @@
      <div class="row">
       <div class="span3 bs-docs-sidebar">
         <ul class="nav nav-list bs-docs-sidenav">
-          <li><a href="#global">Create User</a></li>
+          <li><a href="register.do?method=register">Create User</a></li>
           <li><a href="#gridSystem"></a></li>
           <li><a href="#fluidGridSystem"></a></li>
           <li><a href="#layouts"></a></li>
