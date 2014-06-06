@@ -31,7 +31,14 @@
 		<forward name="logout" path="/pages/login.jsp"/>
 		<forward name="reports" path="/pages/login.jsp"/>
 		<forward name="failure" path="/pages/home.jsp" /> 
-	</action> 
+	</action>
+	
+	<action path="/register"
+    	type="com.medtraq.action.RegisterActivityAction"
+    	name="registerForm" parameter="method" scope="session"
+    	validate="false">
+    	<forward name="success" path="/pages/registration.jsp" />
+    </action>
 	
     </action-mappings>
 
